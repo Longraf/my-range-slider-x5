@@ -1,0 +1,134 @@
+.my-JSRS-rangeSlider {
+  width: 95%;
+  padding: 30px 5px 0px 5px;
+  position: relative;
+  //$colorTheme: #ed8b52;
+  $colorTheme: rgb(237,139,82);
+  .JSRSrangeSlider {
+    border-radius: 5px 5px;
+    width: 100%;
+    height: 30px;
+    background-color: #f1f1f1;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    flex-direction: row;
+    .JSRSvaluee{
+      position: absolute;
+      bottom: 2px;
+      background: #f1f1f1;
+      color: rgba(155,155,155, 0.8);
+      border-radius: 5px 5px;
+      font-size: 0.85em;
+      z-index: 11;
+    }
+    .min-value {
+      left: 0px;
+    }
+    .max-value {
+      right: 0px;
+    }
+    .space-left{
+      flex-grow: 0.1;
+      display: flex;
+      justify-content: flex-end;
+      border-radius: 5px;
+      z-index: 2;
+      .min__button {
+        .range__value_left{
+          transform: translateY(-29px);
+          position: relative;
+        } 
+      }
+    }
+    .JSRSrange-line {
+      height: 10px;
+      background: $colorTheme;
+      z-index: 0;
+      align-self: center;
+      flex-grow: 0.8;
+    }
+    .space-right{
+      flex-grow: 0.1;
+      .max__button {
+        //left: -15px;
+        transform: translateX(-10px);
+        .range__value_right{
+          transform: translateY(-29px);
+          //right: 15px;
+          //left: -100px;
+        }
+      }
+    }
+    .JSRSspace {
+      position: relative;
+      .JSRSbuttonn {
+        display   : flex;
+        flex-wrap : nowrap;
+        z-index   : 2;
+        box-sizing: border-box;
+        //outline: 2px solid $colorTheme;
+        width: 8px;
+        border-radius: 3px;
+        justify-content: center ;
+        flex: 0;
+        //left: 200px;
+        height: 30px;
+        border: none;
+        background-color: $colorTheme;
+        //position: relative;
+        position: absolute;
+        .JSRSrange__value {
+          //width:         100%;
+          flex-wrap:     nowrap;
+          border:        2px solid $colorTheme;
+          margin:        auto;
+          display:       block;
+          white-space:   nowrap;
+          text-align:    center;
+          background:    rgba(237,139,82, 0.3);
+          border-radius: 20px 20px 20px 20px;
+          padding:       1px 2px;
+          user-select:   none;
+          position:      relative;
+          box-sizing:    border-box;
+        }
+      }
+    }
+  }
+  .JSRSscale {
+    //display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    font-size: 0.8em;
+    white-space: nowrap;
+    //background: greenyellow;
+    padding-bottom: 25px;
+    top: 2px;
+    span {
+      //$colorScale: rgba(155,155,155, 1);
+      $colorScale: rgb(0, 0, 0);
+      color: $colorScale;
+      width: 0px;
+      outline: 1px solid $colorScale;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      //left: 360px;
+      p {
+        top: -2px;
+        position: relative;
+      }
+    }
+  }
+}
+/*body {
+  background: #d7d7d7;
+}
+.wrapper{
+  width: 95%;
+  height: 50px;
+  padding: 30px;
+}*/
