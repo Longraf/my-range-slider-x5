@@ -21,12 +21,9 @@
     "sass": "^1.23.7"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
     "del": "^5.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^7.0.1",
     "gulp-browserify": "^0.5.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
