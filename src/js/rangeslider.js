@@ -59,7 +59,7 @@ module.exports = class rangeslider {
             scaleSpan               : this.Target.querySelectorAll('.JSRSscale span'),
             scaleSpanP              : this.Target.querySelectorAll('.JSRSscale span p'),
         };
-        this._startPosition = () => {
+        this._startPosition = (event) => {
             let minButtonCoord = this._Selectors.spaceLeft.offsetWidth - this._Selectors.minButton.offsetWidth/2;
             let maxButtonCoord = this._Selectors.spaceRight.getBoundingClientRect().x - this._Selectors.slider.getBoundingClientRect().x - this._Selectors.minButton.offsetWidth/2;
             let coord = event.pageX - this._Selectors.slider.getBoundingClientRect().x;
@@ -237,7 +237,7 @@ module.exports = class rangeslider {
             that._installRangeValueHTML();
             // that.Values[0] = LeftGrow * that.MaxValue;
         }
-        function moveRightSlider() {
+        function moveRightSlider(event) {
             event.preventDefault();
             let coord = event.pageX - that._Selectors.slider.getBoundingClientRect().x;
             if (StepLength) {
@@ -345,7 +345,7 @@ module.exports = class rangeslider {
                 if (callNow) func.apply(context, args);
             };
         };
-        that._Selectors.slider.addEventListener('mousedown' , this._startPosition);
+        that._Selectors.slider.addEventListener('mousedown' , (event)=>this._startPosition(event));
         document.addEventListener('mouseup', function () {
             document.removeEventListener('mousemove', moveRightSlider);
             document.removeEventListener('mousemove', moveLeftSlider);

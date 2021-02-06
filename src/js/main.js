@@ -1,3 +1,6 @@
+import '../sass/main.scss'
+import './rangeslider'
+
 let RangeSlider = require('./rangeslider');
 
 let rr = new RangeSlider({
@@ -19,6 +22,7 @@ let rr2 = new RangeSlider({
     StepLength   : 0.1,
 
 });
+
 let rr3 = new RangeSlider({
     Target       : document.querySelector('.wrapper'),
     MinValue     : 500,
@@ -28,6 +32,7 @@ let rr3 = new RangeSlider({
     ScaleStep    : false,
     StepLength   : false,
 });
+
 let rr4 = new RangeSlider({
     Target       : document.querySelector('.wrapper'),
     MinValue     : 10000,
@@ -36,6 +41,7 @@ let rr4 = new RangeSlider({
     MinMaxVision : true,
     // StepLength   : 1,
 });
+
 let rr5 = new RangeSlider({
     Target       : document.querySelector('.wrapper'),
     MinValue     : 28,
